@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
 
 import todoReducer from './store/reducers/todoReducer';
+import visibilityFilter from './store/reducers/visibilityFilter';
 
 import './index.css';
 import App from './App';
@@ -13,7 +14,8 @@ import * as serviceWorker from './serviceWorker';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    todos: todoReducer
+    todos: todoReducer,
+    visibilityFilter
 })
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))

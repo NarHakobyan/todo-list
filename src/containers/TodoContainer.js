@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 
 import TodoInput from '../components/TodoInput'
 import TodoList from '../components/TodoList'
+import Footer from '../components/Footer'
 import * as actions from '../store/actions/index';
 
 
@@ -15,6 +16,7 @@ class TodoContainer extends Component {
                 <TodoList onDeleteTodo={this.props.onDeleteTodo}
                           onCompleteTodo={this.props.onCompleteTodo}
                           todos={this.props.todos}/>
+                <Footer/>
             </div>
         )
     }

@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 class TodoItem extends Component {
 
     handleComplete() {
+        document.getElementById("completed").disabled = true
         this.props.onCompleteTodo(this.props.todo.id)
     }
 
@@ -13,9 +14,10 @@ class TodoItem extends Component {
     render() {
         return (
             <li>
-              <div>{this.props.todo.text}</div>
-              <button onClick={this.handleComplete.bind(this)}>Mark as completed</button>
-              <button onClick={this.handleDelete.bind(this)}>Delete todo</button>
+                <div>
+                    <input id="completed" type="checkbox" onChange={this.handleComplete.bind(this)}/>
+                    {this.props.todo.text}</div>
+                <button onClick={this.handleDelete.bind(this)}>Delete todo</button>
             </li>
         )
     }

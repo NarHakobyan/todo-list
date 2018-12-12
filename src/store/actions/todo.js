@@ -22,10 +22,22 @@ export const deleteTodo = (id) => {
 }
 
 
-export const createNewUserIdAsync = () => {
-    return (dispatch) => {
-        setTimeout(() => {
-            dispatch(actionTypes.ADD_TODO())
-        }, 2500)
+export const setVisibilityFilter = filter => {
+    return {
+        type: actionTypes.setVisibilityFilter,
+        filter
     }
+}
+
+export const toggleTodo = id => {
+    return {
+        type: actionTypes.toggleTodo,
+        id
+    }
+}
+
+export const VisibilityFilters = {
+    SHOW_ALL: 'SHOW_ALL',
+    SHOW_COMPLETED: 'SHOW_COMPLETED',
+    SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
