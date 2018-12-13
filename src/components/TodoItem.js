@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 class TodoItem extends Component {
 
     handleComplete() {
-        document.getElementById("completed").disabled = true
         this.props.onClick(this.props.id)
     }
 
