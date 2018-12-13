@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import TodoContainer from './containers/TodoContainer';
-import './App.css';
+import React from 'react'
+import FilterTabs from './components/FilterTabs'
+import AddTodo from './containers/AddTodo'
+import VisibleTodoList from './containers/ShowList'
 
-class App extends Component {
-  render() {
-    return (
-        <div id='app'>
-            <TodoContainer />
-        </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <AddTodo />
+    <VisibleTodoList />
+    <FilterTabs />
+  </div>
+)
 
-export default App;
+export default App
