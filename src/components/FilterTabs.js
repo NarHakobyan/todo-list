@@ -9,7 +9,7 @@ const FilterTabs = () => (
       All
     </FilterLink>
     <FilterLink filter={VisibilityFilters.SHOW_ARCHIVE}>
-      Active
+      Archive
     </FilterLink>
     <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
       Completed

@@ -16,7 +16,12 @@ class TodoItem extends Component {
         return (
             <li>
                 <div>
-                    <input id="completed" type="checkbox" value={this.props.completed} onChange={this.handleComplete.bind(this)}/>
+                    <input id="completed"
+                           type="checkbox"
+                           checked={this.props.completed}
+                           disabled={this.props.completed}
+                           onChange={this.handleComplete.bind(this)}
+                    />
                     {this.props.text}</div>
                 <button onClick={this.handleDelete.bind(this)}>Delete todo</button>
             </li>
