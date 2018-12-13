@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
-import { toggleTodo } from '../actions'
+import { toggleTodo } from '../store/actions'
 import TodoList from '../components/TodoList'
-import { VisibilityFilters } from '../actions'
+import { VisibilityFilters } from '../store/actions'
 
 const getVisibleTodos = (todos, filter) => {
   switch (filter) {
@@ -9,7 +9,7 @@ const getVisibleTodos = (todos, filter) => {
       return todos
     case VisibilityFilters.SHOW_COMPLETED:
       return todos.filter(t => t.completed)
-    case VisibilityFilters.SHOW_ACTIVE:
+    case VisibilityFilters.SHOW_ARCHIVE:
       return todos.filter(t => !t.completed)
     default:
       throw new Error('Unknown filter: ' + filter)

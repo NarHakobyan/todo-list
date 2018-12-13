@@ -1,6 +1,6 @@
 import React from 'react'
 import FilterLink from '../containers/FilterLink'
-import { VisibilityFilters } from '../actions'
+import { VisibilityFilters } from '../store/actions'
 
 const FilterTabs = () => (
   <div>
@@ -8,7 +8,7 @@ const FilterTabs = () => (
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>
       All
     </FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
+    <FilterLink filter={VisibilityFilters.SHOW_ARCHIVE}>
       Active
     </FilterLink>
     <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
