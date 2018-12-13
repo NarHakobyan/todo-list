@@ -2,7 +2,7 @@ import React from 'react'
 import FilterLink from '../containers/FilterLink'
 import { VisibilityFilters } from '../store/actions/todo'
 
-const Footer = () => (
+const FilterTabs = () => (
     <p>
         Show:
         {' '}
@@ -11,13 +11,14 @@ const Footer = () => (
         </FilterLink>
         {', '}
         <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>
-            Active
+            Archived
         </FilterLink>
         {', '}
         <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
             Completed
         </FilterLink>
+        {' Todos'}
     </p>
 )
 
-export default Footer
+export default FilterTabs

@@ -18,6 +18,7 @@ class TodoInput extends Component {
     handleSubmit(event) {
         event.preventDefault()
         this.props.onAddTodo(this.state.inputText)
+        this.setState({inputText: ''})
     }
 
     render() {

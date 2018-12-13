@@ -1,5 +1,6 @@
 export {
     addTodo,
     deleteTodo,
-    completeTodo
+    completeTodo,
+    setVisibilityFilter
 } from './todo';
