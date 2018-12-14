@@ -6,7 +6,9 @@ const AddTodo = ({ dispatch }) => {
   let input
 
   return (
-    <div>
+
+
+    <div className="container__footer">
       <form onSubmit={e => {
         e.preventDefault()
         if (!input.value.trim()) {
@@ -15,8 +17,8 @@ const AddTodo = ({ dispatch }) => {
         dispatch(addTodo(input.value))
         input.value = ''
       }}>
-        <input ref={node => input = node} />
-        <button type="submit">
+        <input placeholder="What do you need to do?" ref={node => input = node} />
+        <button type="submit" className="button expanded">
           Add Todo
         </button>
       </form>
