@@ -1,13 +1,9 @@
 const archivedTodos = (state = [], action) => {
   switch (action.type) {
-    case 'ARCHIVE_TODO':
+      case 'ARCHIVE_TODO':
         return [
             ...state,
-            {
-                id: action.id,
-                text: action.text,
-                completed: false
-            }
+                action
         ]
       default:
         return state

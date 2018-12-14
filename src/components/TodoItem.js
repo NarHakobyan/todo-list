@@ -4,15 +4,15 @@ import PropTypes from 'prop-types'
 class TodoItem extends Component {
 
     handleComplete() {
-        this.props.onClick(this.props.id)
+        this.props.onClick()
     }
 
     handleDelete() {
-        this.props.onDeleteTodo(this.props.id)
+        this.props.onDeleteTodo()
     }
 
     handleArchive() {
-        this.props.onArchiveTodo(this.props.id)
+        this.props.onArchiveTodo()
     }
 
     render() {

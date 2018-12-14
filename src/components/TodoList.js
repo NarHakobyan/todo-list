@@ -10,7 +10,7 @@ const TodoList = ({ todos, toggleTodo, onDeleteTodo, onArchiveTodo }) => (
         {...todo}
         onClick={() => toggleTodo(todo.id)}
         onDeleteTodo={() => onDeleteTodo(todo.id)}
-        onArchiveTodo={() => onArchiveTodo(todo.id)}
+        onArchiveTodo={() => onArchiveTodo(todo)}
       />
     )}
   </ul>

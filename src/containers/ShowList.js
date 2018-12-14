@@ -23,7 +23,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     toggleTodo: id => dispatch(toggleTodo(id)),
     onDeleteTodo: (id) => dispatch(deleteTodo(id)),
-    onArchiveTodo: (id) => dispatch(archiveTodo(id))
+    onArchiveTodo: (todo) => dispatch(archiveTodo(todo))
 
 })
 
