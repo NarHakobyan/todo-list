@@ -11,6 +11,10 @@ class TodoItem extends Component {
         this.props.onDeleteTodo(this.props.id)
     }
 
+    handleArchive() {
+        this.props.onArchiveTodo(this.props.id)
+    }
+
     render() {
         return (
             <li>
@@ -23,6 +27,7 @@ class TodoItem extends Component {
                     />
                     {this.props.text}</div>
                 <button onClick={this.handleDelete.bind(this)}>Delete todo</button>
+                <button onClick={this.handleArchive.bind(this)}>Archive todo</button>
             </li>
 
         )
@@ -32,6 +37,7 @@ class TodoItem extends Component {
 
 TodoItem.propTypes = {
     onClick: PropTypes.func.isRequired,
+    onArchiveTodo: PropTypes.func.isRequired,
     completed: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired
 }
